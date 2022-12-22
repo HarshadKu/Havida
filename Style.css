@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.TopAdd{
+    width: 100%;
+    height: 40px;
+
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TopAdd a{
+    text-decoration: none;
+    color: white;
+}
+
+.Brandname{
+    width: 100%;
+    height: 80px;
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Brandname a{
+    text-decoration: none;
+    color: rgb(10, 7, 7);
+    font-size: 50px;
+}
+#menuli{
+    width: 80%;
+    height: 30px;
+    display: grid;
+    margin-left: 10%;;
+    /* justify-items: center;
+    align-items: center; */
+    /* margin: 0px auto; */
+
+    
+    
+}
+#menuli ul{
+    list-style: none;
+    margin: auto;
+    z-index: 1;
+    
+}
+#menuli ul li{
+    
+    width: 160px;
+    height: 25px;
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    
+
+
+    
+}
+#menuli ul li a{
+    display: block;
+    color: rgb(174, 168, 168);
+    text-decoration: none;
+   
+}
+#menuli ul li:hover{
+    background-color: rgb(154, 158, 158);
+    
+}
+#menuli ul li a:hover{
+    color: black;
+    
+
+}
+#menuli ul li ul{
+    display: none;
+
+   
+
+}
+#menuli ul li:hover ul{
+    display: block;
+    position: relative;
+    
+}
+#menuli ul li ul li{
+    float: left;
+    margin-left: 0px;
+    background-color: white;
+
+}
+#menuli ul li ul li ul{
+    display: none;
+}
+.chevron{
+    width: 50px;
+    height: 50px;
+}
+.image-down{
+    position: relative;
+}
+.image-up{
+    position: absolute;
+}
+.imgess{
+    display: inline;
+}
+.Imagerr{
+    width: 100%;
+    height: 345px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+ .Imagemanu img{
+   
+    /* width: 100%;
+    height: 345px;
+    overflow: hidden; */
+    background-image: cover;
+    background-size: 100% 345px;
+    
+} 
+

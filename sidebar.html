@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HavidaSarees</title>
+    <link rel="stylesheet" href="css/all.css" >
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .sidebar ul li ul{
+            display: none;
+        }
+        .sidebar{
+            top: 40px;
+            position: fixed;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #042331;
+            transition: all .5s ease;
+        }
+        .sidebar header{
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            line-height: 70px;
+            background: #063146;
+            user-select: none;
+        }
+        .sidebar ul li a{
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 55px;
+            font-size: 20px;
+            color: white;
+            padding-left: 40px;
+            box-sizing: border-box;
+            border-top: 1px solid rgba(255,255,255,.1);
+            border-bottom: 1px solid black;
+            transition: .4s;
+        }
+        .sidebar ul li:hover a{
+            padding-left: 50px;
+        }
+        #check{
+        display: none;
+        }
+        label #btn, label #cancel{
+            position: absolute;
+            cursor: pointer;
+            background: #042331;
+            border-radius: 3px;
+        }
+        label #btn{
+            top: 60px;
+            left: 20px;
+            position: absolute;
+            font-size: 35px;
+            color: white; 
+            padding: 6px 12px;
+            transition: all .5s;
+        }
+        label #cancel{
+            z-index:1111 ;
+            left: -195px;
+            top: 60px;
+            font-size: 30px;
+            color: #0a5275;
+            padding: 4px 9px;
+            transition: all .5s ease;
+        }
+        #check:checked ~ .sidebar{
+            left: 0;
+        }
+        #check:checked ~ label #btn{
+            left: 250px;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #check:checked ~ label #cancel{
+            left: 195px;
+            
+        }
+        #menuli1{
+    display: none;
+}
+.TopAdd{
+    width: 100%;
+    height: 40px;
+
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.TopAdd a{
+    text-decoration: none;
+    color: white;
+}
+
+.Brandname{
+    width: 100%;
+    height: 80px;
+    border: 1px solid green;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Brandname a{
+    text-decoration: none;
+    color: rgb(10, 7, 7);
+    font-size: 2em;
+   
+   
+
+}
+
+#menuli{
+
+    width: 80%;
+    height: 30px;
+    display: grid;
+    margin-left: 10%;;
+    /* justify-items: center;
+    align-items: center; */
+    /* margin: 0px auto; */
+
+    
+    
+}
+#menuli ul{
+    list-style: none;
+    margin: auto;
+    z-index: 1;
+    
+}
+#menuli ul li{
+    
+    width: 160px;
+    height: 25px;
+    border: 1px solid white;
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    
+
+
+    
+}
+#menuli ul li a{
+    display: block;
+    color: rgb(174, 168, 168);
+    text-decoration: none;
+   
+}
+#menuli ul li:hover{
+    background-color: rgb(154, 158, 158);
+    
+}
+#menuli ul li a:hover{
+    color: black;
+    
+
+}
+#menuli ul li ul{
+    display: none;
+
+   
+
+}
+#menuli ul li:hover ul{
+    display: block;
+    position: relative;
+    
+}
+#menuli ul li ul li{
+    float: left;
+    margin-left: 0px;
+    background-color: white;
+
+}
+#menuli ul li ul li ul{
+    display: none;
+}
+.chevron{
+    width: 50px;
+    height: 50px;
+}
+.image-down{
+    position: relative;
+}
+.image-up{
+    position: absolute;
+}
+.imgess{
+    display: inline;
+}
+.Imagerr{
+    width: 100%;
+    height: 345px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+ .Imagemanu img{
+   
+    /* width: 100%;
+    height: 345px;
+    overflow: hidden; */
+    background-image: cover;
+    background-size: 100% 345px;
+    
+} 
+@media(min-width:450px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .TopAdd{
+        font-size: 14px;
+    }
+    
+    
+
+   
+    /* .Brandname a{
+        text-decoration: none;
+        color: rgb(10, 7, 7);
+        font-size: 3em;
+       line-height: 80px;
+       margin-left: 20%;
+    
+    } */
+}
+@media(min-width:750px){
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .menub{
+        display: none;
+    }
+    #menuli1{
+        display: block;
+    }
+}
+@media(min-width:950px){
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .menub{
+        display: none;
+    }
+    #menuli1{
+        display:block;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="TopAdd">
+        <a href="#">Weekend Fale Sale is LIVE! Flat 70% + 25% Off On all Orders</a>
+    </div>
+    <div class="Brandname brandn">
+        
+       <div class="menub">
+       <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+
+    </label>
+    <div class="sidebar">
+        <header>Havida </header>
+        <ul>
+        <li><a href="New_Arrivals.php">NEW ARRIVALS</a></li>
+            <li ><a class="chevr" style="display: block;" href="#">COLLECTIONS <div class="imgess"></div> </a>
+                <ul>
+                    <li><a href="grid.php">Favorite Picks</a></li>
+                    <li><a href="#">Summer Sarees</a></li>
+                    <li><a href="#">Casual Style</a></li>
+                    <li><a href="#">Havida Specials</a></li>
+                    <li><a href="#">Havida Exclusives</a></li>
+                    <li><a href="#">Royal Drape</a></li>
+                    <li><a href="#">Grand Heritage Sale</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SAREES </a>
+                <ul>
+                    <li><a href="#"> WEAVES </a></li>
+                    <li><a href="#"> FABRIC </a></li>
+                    <li><a href="#"> PRINTS </a></li>
+                    <li><a href="#"> COLOUR </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CATEGORIES </a>
+                <ul>
+                    <li><a href="#">LEHENGAS</a></li>
+                    <li><a href="#">SALWAR SUITS</a></li>
+                    <li><a href="#">CUSTOMIZATION</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                </ul>
+            </li>
+            <li><a href="#">READY TO SHIP</a></li>
+            <li><a href="#">WEDDING VIBES </a>
+                <ul><li><a href="#">OCCASION</a>
+                        <ul>
+                            <li><a href="#">Engagement</a></li>
+                            <li><a href="#">Mehendi</a></li>
+                            <li><a href="#">Sangeet</a></li>
+                            <li><a href="#">Haldi</a></li>
+                            <li><a href="#">Bridal</a></li>
+                            <li><a href="#">Reception</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">WEDDING TALES</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+       </div>
+        <a href="#">Havida Sarees</a>
+    
+    </div>
+     <div id="menuli1">
+        <div id="menuli">
+         <ul>
+            <li><a href="New_Arrivals.php">NEW ARRIVALS</a></li>
+            <li ><a class="chevr" style="display: block;" href="#">COLLECTIONS <div class="imgess"><img class="image-down" style="width: 15px; height: 15px; margin-left:5px;" src="chevron-down-solid.svg"> </div> </a>
+                <ul>
+                    <li><a href="grid.php">Favorite Picks</a></li>
+                    <li><a href="#">Summer Sarees</a></li>
+                    <li><a href="#">Casual Style</a></li>
+                    <li><a href="#">Havida Specials</a></li>
+                    <li><a href="#">Havida Exclusives</a></li>
+                    <li><a href="#">Royal Drape</a></li>
+                    <li><a href="#">Grand Heritage Sale</a></li>
+                </ul>
+            </li>
+            <li><a href="#">SAREES <img class="image-down" style="width: 15px; height: 15px; margin-left:5px;" src="chevron-down-solid.svg"></a>
+                <ul>
+                    <li><a href="#"> WEAVES </a></li>
+                    <li><a href="#"> FABRIC </a></li>
+                    <li><a href="#"> PRINTS </a></li>
+                    <li><a href="#"> COLOUR </a></li>
+                </ul>
+            </li>
+            <li><a href="#">CATEGORIES <img class="image-down" style="width: 15px; height: 15px; margin-left:5px;" src="chevron-down-solid.svg"></a>
+                <ul>
+                    <li><a href="#">LEHENGAS</a></li>
+                    <li><a href="#">SALWAR SUITS</a></li>
+                    <li><a href="#">CUSTOMIZATION</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                </ul>
+            </li>
+            <li><a href="#">READY TO SHIP</a></li>
+            <li><a href="#">WEDDING VIBES <img class="image-down" style="width: 15px; height: 15px; margin-left:5px;" src="chevron-down-solid.svg"></a>
+                <ul><li><a href="#">OCCASION</a>
+                        <ul>
+                            <li><a href="#">Engagement</a></li>
+                            <li><a href="#">Mehendi</a></li>
+                            <li><a href="#">Sangeet</a></li>
+                            <li><a href="#">Haldi</a></li>
+                            <li><a href="#">Bridal</a></li>
+                            <li><a href="#">Reception</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">WEDDING TALES</a></li>
+                </ul>
+            </li>
+        </ul>
+    
+    
+    </div>
+    
+    </div>
+</body>
+</html>
